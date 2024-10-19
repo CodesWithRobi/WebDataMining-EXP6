@@ -1,5 +1,3 @@
-#### NAME: ROBINSON J
-
 #### REG.NO: 212223040170
 
 ## Experiment-06: Information Retrieval Using Vector Space Model in Python
@@ -94,6 +92,7 @@ for idx in ranked_docs:
 ```
 
 ### Output:
+![Screenshot from 2024-10-19 09-40-25](https://github.com/user-attachments/assets/9f67c823-e6dc-4216-89d2-5498c6a481b8)
 
 ### Result:
 
