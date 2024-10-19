@@ -1,31 +1,3 @@
-#### NAME: ROBINSON J
-
-#### REG.NO: 212223040170
-
-## Experiment-06: Information Retrieval Using Vector Space Model in Python
-
-## DATE: 19/10/24
-
-### AIM: To implement Information Retrieval Using Vector Space Model in Python.
-
-### Description:
-
-<div align = "justify">
-Implementing Information Retrieval using the Vector Space Model in Python involves several steps, including preprocessing text data, constructing a term-document matrix, 
-calculating TF-IDF scores, and performing similarity calculations between queries and documents. Below is a basic example using Python and libraries like nltk and 
-sklearn to demonstrate Information Retrieval using the Vector Space Model.
-
-### Procedure:
-
-1. Define sample documents.
-2. Preprocess text data by tokenizing, removing stopwords, and punctuation.
-3. Construct a TF-IDF matrix using TfidfVectorizer from sklearn.
-4. Define a search function that calculates cosine similarity between a query and documents based on the TF-IDF matrix.
-5. Execute a sample query and display the search results along with similarity scores.
-
-### Program:
-
-```python
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -42,18 +14,18 @@ nltk.download('stopwords')
 def preprocess_text(text):
     # Tokenization and lowercase
     tokens = text.lower().split()
-
+    
     # Remove punctuation
     tokens = [word.translate(str.maketrans('', '', string.punctuation)) for word in tokens]
-
+    
     # Remove stopwords
     stop_words = set(stopwords.words('english'))
     tokens = [word for word in tokens if word not in stop_words]
-
+    
     # Apply stemming
     stemmer = PorterStemmer()
     tokens = [stemmer.stem(word) for word in tokens]
-
+    
     # Join tokens back into a string
     return ' '.join(tokens)
 
@@ -91,10 +63,3 @@ print("\nRanked Documents based on Cosine Similarity:")
 for idx in ranked_docs:
     print(f"Document {idx}: {documents[idx]} (Score: {cosine_similarities[idx]:.4f})")
 
-```
-
-### Output:
-
-### Result:
-
-Successfully implemented Information Retrieval Using Vector Space Model in Python.
